@@ -1,0 +1,119 @@
+<ui version="4.0" >
+ <class>dtmfDlg</class>
+ <widget class="QDialog" name="dtmfDlg" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>265</width>
+    <height>210</height>
+   </rect>
+  </property>
+  <property name="sizePolicy" >
+   <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize" >
+   <size>
+    <width>265</width>
+    <height>210</height>
+   </size>
+  </property>
+  <property name="contextMenuPolicy" >
+   <enum>Qt::NoContextMenu</enum>
+  </property>
+  <property name="windowTitle" >
+   <string>DTMF</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" >
+   <item row="0" column="0" >
+    <widget class="QPushButton" name="oneBtn" >
+     <property name="text" >
+      <string>1</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" >
+    <widget class="QPushButton" name="twoBtn" >
+     <property name="text" >
+      <string>2</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2" >
+    <widget class="QPushButton" name="threeBtn" >
+     <property name="text" >
+      <string>3</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" >
+    <widget class="QPushButton" name="fourBtn" >
+     <property name="text" >
+      <string>4</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" >
+    <widget class="QPushButton" name="fiveBtn" >
+     <property name="text" >
+      <string>5</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2" >
+    <widget class="QPushButton" name="sixBtn" >
+     <property name="text" >
+      <string>6</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" >
+    <widget class="QPushButton" name="sevenBtn" >
+     <property name="text" >
+      <string>7</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" >
+    <widget class="QPushButton" name="eightBtn" >
+     <property name="text" >
+      <string>8</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2" >
+    <widget class="QPushButton" name="nineBtn" >
+     <property name="text" >
+      <string>9</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" >
+    <widget class="QPushButton" name="astBtn" >
+     <property name="text" >
+      <string>*</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1" >
+    <widget class="QPushButton" name="zeroBtn" >
+     <property name="text" >
+      <string>0</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2" >
+    <widget class="QPushButton" name="poundBtn" >
+     <property name="text" >
+      <string>#</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

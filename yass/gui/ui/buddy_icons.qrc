@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="buddy" >
+    <file>icons/buddylist/online.png</file>
+    <file>icons/buddylist/offline.png</file>
+  </qresource>
+</RCC>

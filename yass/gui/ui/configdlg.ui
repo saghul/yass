@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>configDlg</class>
+ <widget class="QDialog" name="configDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>430</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>430</width>
+    <height>350</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Configuration</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="cfgTabs">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="accTab">
+      <attribute name="icon">
+       <iconset resource="configuration_icons.qrc">
+        <normaloff>:/configuration/icons/configuration/acc.png</normaloff>:/configuration/icons/configuration/acc.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Account</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="userLabel">
+         <property name="text">
+          <string>Username</string>
+         </property>
+         <property name="buddy">
+          <cstring>userText</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="userText"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="passLabel">
+         <property name="text">
+          <string>Password</string>
+         </property>
+         <property name="buddy">
+          <cstring>passwordText</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="passwordText">
+         <property name="echoMode">
+          <enum>QLineEdit::PasswordEchoOnEdit</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="domainLabel">
+         <property name="text">
+          <string>Domain</string>
+         </property>
+         <property name="buddy">
+          <cstring>domainText</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="domainText"/>
+       </item>
+       <item row="7" column="1">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="3" column="1">
+        <widget class="QSpinBox" name="regtimeNum">
+         <property name="maximum">
+          <number>3600</number>
+         </property>
+         <property name="value">
+          <number>3600</number>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="regtimeLabel">
+         <property name="text">
+          <string>RegistryTimeout</string>
+         </property>
+         <property name="buddy">
+          <cstring>regtimeNum</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="stunText"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="stunLabel">
+         <property name="text">
+          <string>STUN server</string>
+         </property>
+         <property name="buddy">
+          <cstring>stunText</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QCheckBox" name="presenceBox">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="presenceLabel">
+         <property name="text">
+          <string>Publish Presence</string>
+         </property>
+         <property name="buddy">
+          <cstring>presenceBox</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="vmextenLabel">
+         <property name="text">
+          <string>Voicemail Extension</string>
+         </property>
+         <property name="buddy">
+          <cstring>vmextenText</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLineEdit" name="vmextenText"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="mediaTab">
+      <attribute name="icon">
+       <iconset resource="configuration_icons.qrc">
+        <normaloff>:/configuration/icons/configuration/media.png</normaloff>:/configuration/icons/configuration/media.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Media</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="vadLable">
+         <property name="text">
+          <string>Enable VAD</string>
+         </property>
+         <property name="buddy">
+          <cstring>vadBox</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QCheckBox" name="vadBox">
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="framelenLabel">
+         <property name="text">
+          <string>Audio frames length(ms)</string>
+         </property>
+         <property name="buddy">
+          <cstring>framelenBox</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="framelenBox">
+         <property name="minimum">
+          <number>20</number>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="singleStep">
+          <number>10</number>
+         </property>
+         <property name="value">
+          <number>20</number>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="qualityLabel">
+         <property name="text">
+          <string>Audio quality</string>
+         </property>
+         <property name="buddy">
+          <cstring>qualityBox</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QSlider" name="qualityBox">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>10</number>
+         </property>
+         <property name="value">
+          <number>6</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::TicksBelow</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="dtmfmodeLabel">
+         <property name="text">
+          <string>DTMF transport</string>
+         </property>
+         <property name="buddy">
+          <cstring>dtmfmodeBox</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="dtmfmodeBox">
+         <item>
+          <property name="text">
+           <string>RFC2833</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SIP INFO</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="codecTab">
+      <attribute name="icon">
+       <iconset resource="configuration_icons.qrc">
+        <normaloff>:/configuration/icons/configuration/codecs.png</normaloff>:/configuration/icons/configuration/codecs.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Codecs</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QListWidget" name="enaList">
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="dragEnabled">
+            <bool>true</bool>
+           </property>
+           <property name="dragDropMode">
+            <enum>QAbstractItemView::InternalMove</enum>
+           </property>
+           <property name="movement">
+            <enum>QListView::Free</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="enaLabel">
+           <property name="text">
+            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Enabled Codecs&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QWidget" name="arrowFrame" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QPushButton" name="rightBtn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>28</width>
+              <height>28</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>-&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="leftBtn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>28</width>
+              <height>28</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>&lt;-</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QListWidget" name="disList">
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="dragEnabled">
+            <bool>true</bool>
+           </property>
+           <property name="dragDropMode">
+            <enum>QAbstractItemView::InternalMove</enum>
+           </property>
+           <property name="movement">
+            <enum>QListView::Free</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="disLabel">
+           <property name="text">
+            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Disabled Codecs&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="logTab">
+      <attribute name="icon">
+       <iconset resource="configuration_icons.qrc">
+        <normaloff>:/configuration/icons/configuration/log.png</normaloff>:/configuration/icons/configuration/log.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Log</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QLabel" name="levelLabel">
+         <property name="text">
+          <string>Log level</string>
+         </property>
+         <property name="buddy">
+          <cstring>levelBox</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="levelBox">
+         <property name="maximum">
+          <number>9</number>
+         </property>
+         <property name="value">
+          <number>9</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="fileLabel">
+         <property name="text">
+          <string>Log filename</string>
+         </property>
+         <property name="buddy">
+          <cstring>fileText</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="msgLabel">
+         <property name="text">
+          <string>Log SIP messages</string>
+         </property>
+         <property name="buddy">
+          <cstring>msgBox</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QCheckBox" name="msgBox">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="fileText">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="sysTab">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <attribute name="icon">
+       <iconset resource="configuration_icons.qrc">
+        <normaloff>:/configuration/icons/configuration/cfg.png</normaloff>:/configuration/icons/configuration/cfg.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>System</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0">
+        <widget class="QLabel" name="devLabel">
+         <property name="text">
+          <string>Sound Playback Device</string>
+         </property>
+         <property name="buddy">
+          <cstring>playbackdevBox</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="portLabel">
+         <property name="text">
+          <string>SIP port</string>
+         </property>
+         <property name="buddy">
+          <cstring>portBox</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QSpinBox" name="portBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimum">
+          <number>1025</number>
+         </property>
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+         <property name="value">
+          <number>5060</number>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="playbackdevBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="capturedevLabel">
+         <property name="text">
+          <string>Sound Capture Device</string>
+         </property>
+         <property name="buddy">
+          <cstring>capturedevBox</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="capturedevBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QPushButton" name="testBtn">
+         <property name="text">
+          <string>Test sound devices</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="transportLabel">
+         <property name="text">
+          <string>Transport type</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QComboBox" name="transportBox">
+         <item>
+          <property name="text">
+           <string>UDP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TCP</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+  <zorder>buttonBox</zorder>
+  <zorder>cfgTabs</zorder>
+ </widget>
+ <resources>
+  <include location="configuration_icons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>configDlg</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>325</x>
+     <y>338</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

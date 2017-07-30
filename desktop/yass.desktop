@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=YASS
+GenericName=A SIP softphone based on PJSIP
+Comment=A SIP softphone based on PJSIP
+Type=Application
+Exec=/usr/bin/yassphone
+Icon=/usr/share/yass/yass48.png
+StartupNotify=false
+Terminal=false
+Categories=Qt;KDE;Network;Telephony;
+

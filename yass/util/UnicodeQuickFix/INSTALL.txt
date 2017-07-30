@@ -1,0 +1,6 @@
+			   INSTALLATION INSTRUCTIONS
+				UnicodeQuickFix
+
+1.	Drop the UnicodeQuickFix folder into your Products folder.
+2.	Restart Zope.
+3.	Pray.

@@ -1,0 +1,15 @@
+Source: yass
+Section: comm
+Priority: extra
+Maintainer: Saúl Ibarra Corretgé (saghul) <saghul@gmail.com>
+Build-Depends: debhelper (>= 7), python (>= 2.5), python-qt4 (>= 4.4), python-pysqlite2, python-dns
+Standards-Version: 3.8.0
+Homepage: http://www.saghul.net
+
+Package: yass
+Architecture: any
+Depends: pjproject, python2.5, python-qt4 (>= 4.4), python-pysqlite2
+Description: YASS is Yet Another SIP Softphone
+ Built on top of PJSIP, YASS is a simple SIP softphone and
+ a easy to use SDK for voice applications.
+

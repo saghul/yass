@@ -1,0 +1,15 @@
+<RCC>
+  <qresource prefix="toolbar" >
+    <file>icons/toolbar/voicemail.png</file>
+    <file>icons/toolbar/history.png</file>
+    <file>icons/toolbar/answer.png</file>
+    <file>icons/toolbar/call.png</file>
+    <file>icons/toolbar/config.png</file>
+    <file>icons/toolbar/dtmf.png</file>
+    <file>icons/toolbar/hangup.png</file>
+    <file>icons/toolbar/hold.png</file>
+    <file>icons/toolbar/reject.png</file>
+    <file>icons/toolbar/xfer.png</file>
+    <file>icons/toolbar/message.png</file>
+  </qresource>
+</RCC>

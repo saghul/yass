@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="configuration" >
+    <file>icons/configuration/codecs.png</file>
+    <file>icons/configuration/acc.png</file>
+    <file>icons/configuration/cfg.png</file>
+    <file>icons/configuration/log.png</file>
+    <file>icons/configuration/media.png</file>
+  </qresource>
+</RCC>

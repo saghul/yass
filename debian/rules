@@ -1,0 +1,60 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+configure: configure-stamp
+
+
+configure-stamp:
+	dh_testdir
+	touch configure-stamp
+
+
+build: build-stamp
+
+
+build-stamp: configure-stamp  
+	dh_testdir
+	touch $@
+
+
+clean: 
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+	dh_clean 
+
+	make clean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep  
+	dh_installdirs
+
+	make prefix=$(CURDIR)/debian/yass/usr
+
+# Build architecture-independent files here.
+binary-indep: install
+
+
+# Build architecture-dependent files here.
+binary-arch: install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs 
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+
+
+.PHONY: build clean binary-indep binary-arch binary install configure
+
+
